@@ -1,17 +1,18 @@
+<template>
 <div class="cards__card card">
     <div class="card__group">
         <div class="card__theme _green">
             <p class="_green">Research</p>
         </div>
-        <a href="#popBrowse" target="_self">
+<a href="#popBrowse" target="_self">
             <div class="card__btn">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </a>
-    <!-- </div> -->
-    <div class="card__content">
+</div>
+<div class="card__content">
         <a href="" target="_blank">
             <h3 class="card__title">Название задачи</h3>
         </a>
@@ -29,5 +30,7 @@
             </svg>
             <p>30.10.23</p>
         </div>
-    <!-- </div>
-</div> -->
+</div>
+</div>
+</template>
+
