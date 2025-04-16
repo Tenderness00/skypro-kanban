@@ -1,6 +1,8 @@
 <script setup>
 import VTask from './VTask.vue';
-defineProps({title: {type: String, required: true}})
+defineProps({title: {type: String, required: true},
+tasks: {type: Array, required: true}
+})
 </script>
 
 <template>
@@ -9,9 +11,7 @@ defineProps({title: {type: String, required: true}})
         <p>{{ title }}</p>
     </div>
     <div class="cards">
-        <VTask/>
-        <VTask/>
-        <VTask/>
+        <VTask v-for="task in tasks" :key="task" v-bind="task"/>
     </div> 
 </div>
 </template>

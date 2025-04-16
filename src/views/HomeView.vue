@@ -1,18 +1,28 @@
-<script setup lang="ts">
-// import AtWorkView from '@/components/VColumn.vue'
+<script setup>
+
 import CreatingTaskView from '@/components/CreatingTaskView.vue';
 import HeadView from '@/components/HeadView.vue';
-// import NewTaskView from '@/components/NewTaskView.vue';
-// import NoStatusView from '@/components/NoStatusView.vue';
-// import ReadyView from '@/components/ReadyView.vue';
-// import TestingView from '@/components/TestingView.vue';
+import Loader from '@/components/Loader.vue';
 import TaskDesk from '@/components/TaskDesk.vue';
+import {onMounted, ref} from 'vue';
+
+const loading = ref(true) 
+
+onMounted(() => {
+ setTimeout(() => {
+      loading.value = false
+ }, 3000);
+})
+
 </script>
 
+
 <template>
-	
-      <CreatingTaskView /> 
-      <HeadView />
-	  <TaskDesk />
+<Loader v-if="loading"/>
+      <template v-else>
+            <CreatingTaskView /> 
+            <HeadView/>
+            <TaskDesk/>
+      </template>	
 
 </template>
