@@ -8,9 +8,6 @@
     </div>
    
 </template>
-<!-- 
-<script>
-import Loader from './VTask.vue'</script> -->
 
 <style>
 .loader-card {
