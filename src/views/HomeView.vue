@@ -14,15 +14,16 @@ onMounted(() => {
  }, 3000);
 })
 
+// const loading = ref(false)
+
 </script>
 
 
 <template>
-<Loader v-if="loading"/>
-      <template v-else>
             <CreatingTaskView /> 
             <HeadView/>
-            <TaskDesk/>
-      </template>	
-
+            <div v-if="loading">Идет загрузка...</div>
+                  <TaskDesk v-else/>
 </template>
+
+
