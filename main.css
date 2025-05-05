@@ -105,6 +105,10 @@ body {
   color: #FFFFFF;
 }
 
+._maroon { 
+  background-color: maroon; 
+}
+
 ._active-category {
   opacity: 1 !important;
 }

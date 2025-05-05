@@ -2,8 +2,8 @@
     <div class="cards__item">
             <div class="cards__card card">
                 <div class="card__group">
-                    <div class="card__theme _green">
-                        <p class="_green">{{topic}}</p>
+                    <div class="card__theme" :class="colorClass">
+                        <p>{{topic}}</p>
                     </div>
                     <a href="#popBrowse" target="_self">
                         <div class="card__btn">
@@ -36,12 +36,30 @@
         </div>
 </template>
 
+<style scoped>
+    .btn{
+        background-color: blue;
+    }
+</style>
+
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
     topic: {type: String, required: true},
+    style: {type: String, disabled: Boolean },
     title: {type: String, required: true},
     date: {type: Date, required: true},
     status: {type: String, required: true},
 })
+
+const colorClass = computed(() => {
+    const colorClasses = {
+        Research: '_green',
+        'Web Design': '_orange',
+        Copywriting: '_purple',
+        }
+    return colorClasses[props.topic] ?? '_gray';
+});
 
 </script>

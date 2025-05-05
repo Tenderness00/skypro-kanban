@@ -11,7 +11,8 @@ tasks: {type: Array, required: true}
         <p>{{ title }}</p>
     </div>
     <div class="cards">
-        <VTask v-for="task in tasks" :key="task" v-bind="task"/>
-    </div> 
+        <VTask v-for="(task, index) in tasks" :key="index" v-bind="task" :index="index" />
+    </div>
+    
 </div>
 </template>

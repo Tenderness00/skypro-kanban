@@ -14,7 +14,6 @@ onMounted(() => {
  }, 3000);
 })
 
-// const loading = ref(false)
 
 </script>
 

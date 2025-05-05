@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue';
 import VColumn from './VColumn.vue';
 import { tasksMock } from '@/mocks/tasks';
+import VTask from './VTask.vue';
 const tasks = ref(tasksMock) 
 
 const noStatusTasks = computed(() => {
@@ -33,14 +34,12 @@ const readyTasks = computed(() => {
 </script>
 
 <template>
-    <div class="container main__content">
+    <div v-if="tasks.length" class="container main__content">
         <VColumn title="Без статуса" :tasks="noStatusTasks"/>
-        <VColumn  title="Нужно сделать" :tasks="needToDoTasks" />
+        <VColumn title="Нужно сделать" :tasks="needToDoTasks" />
         <VColumn title="В работе" :tasks="atWorkTasks"/>
         <VColumn title="Тестирование" :tasks="testingTasks"/>
         <VColumn title="Готово" :tasks="readyTasks"/>
-
     </div>
-        
+        <p v-else>Нет задач</p>
     </template>
-    

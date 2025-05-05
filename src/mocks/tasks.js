@@ -8,14 +8,14 @@ export const tasksMock = [
     },
     {
         id: 2,
-        topic: "Research",
+        topic: "Web Design",
         title: "tasks2",
         date: new Date(),
         status: "need to do",
     },
     {
         id: 3,
-        topic: "Research",
+        topic: "Copywriting",
         title: "tasks3",
         date: new Date(),
         status: "at work",
@@ -29,7 +29,7 @@ export const tasksMock = [
     },
     {
         id: 5,
-        topic: "Research",
+        topic: "Researc",
         title: "tasks5",
         date: new Date(),
         status: "ready",
