@@ -1,9 +1,28 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+
+import CreatingTaskView from '@/components/CreatingTaskView.vue';
+import HeadView from '@/components/HeadView.vue';
+import Loader from '@/components/Loader.vue';
+import TaskDesk from '@/components/TaskDesk.vue';
+import { onMounted, ref} from 'vue';
+
+const loading = ref(true) 
+
+onMounted(() => {
+ setTimeout(() => {
+      loading.value = false
+ }, 3000);
+})
+
+
 </script>
 
+
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+          <HeadView/>
+          <div v-if="loading">Идет загрузка...</div>
+               <TaskDesk v-else/>
+          <RouterView />
 </template>
+
+

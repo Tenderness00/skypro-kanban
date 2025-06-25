@@ -1,10 +1,10 @@
 {
-  "name": "sky-words",
+  "name": "clear",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
@@ -23,5 +23,17 @@
     "prettier": "^3.5.1",
     "vite": "^6.1.0",
     "vite-plugin-vue-devtools": "^7.7.2"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tenderness00/sky-words.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tenderness00/sky-words/issues"
+  },
+  "homepage": "https://github.com/Tenderness00/sky-words#readme"
 }
