@@ -1,5 +1,15 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+const route = useRoute();
+
+const word = computed(
+     () =>
+     words.find((w) => w.id === route.params.id) || { name: "", translation: ""}
+);
+
 </script>
 
 <template>

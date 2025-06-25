@@ -5,7 +5,7 @@
                     <div class="card__theme" :class="colorClass">
                         <p>{{topic}}</p>
                     </div>
-                    <a href="#popBrowse" target="_self">
+                    <a href="/cards/view_card" target="_self">
                         <div class="card__btn">
                             <div></div>
                             <div></div>
@@ -29,7 +29,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <p>{{ date.toLocaleDateString() }}</p>
+                        <!-- <p>{{ date.toLocaleDateString() }}</p> -->
                     </div>
                 </div>
             </div>

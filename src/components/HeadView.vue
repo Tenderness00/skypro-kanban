@@ -9,7 +9,7 @@
 				<a href="" target="_self"><img src="/logo_dark.png" alt="logo"></a>
 			</div>
 			<nav class="header__nav">
-				<button class="header__btn-main-new _hover01" id="btnMainNew"><a href="#popNewCard">Создать новую задачу</a></button>
+				<button class="header__btn-main-new _hover01" id="btnMainNew"><a href="/cards/new_card">Создать новую задачу</a></button>
 				<a @click="handleModal" class="header__user _hover02">Ivan Ivanov</a>
 				<div v-if="isModalVisible" class="header__pop-user-set pop-user-set" id="user-set-target">
 					<a href="">x</a>
